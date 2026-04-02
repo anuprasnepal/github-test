@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1 class="site-title">My <span>Notes</span></h1>
+  <p class="note-count" id="note-count">loading…</p>
+</header>
+
+<div class="controls">
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input type="text" id="search" placeholder="search notes…" oninput="renderNotes()"/>
+  </div>
+  <div class="filter-btns" id="filter-btns">
+    <button class="filter-btn active" data-subject="all" onclick="setFilter('all')">All</button>
+  </div>
+</div>
+
+<main class="grid" id="grid">
+  <div class="state-msg">Loading notes…</div>
+</main>
+
+<footer>
+  <span>Updated whenever a new note is added.</span>
+  <span id="last-updated"></span>
+</footer>
+
+</body>
+</html>
